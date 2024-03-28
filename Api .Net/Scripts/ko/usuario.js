@@ -1,13 +1,11 @@
-﻿var UsuarioModel = new function () {
+﻿const { dart } = require("modernizr");
+
+var UsuarioModel = new function () {
     model = this;
-    model.usuarios = ko.observable(
-        [
-            {
-                "Código": 1,
-                "E-mail": "tonsemprelindo@gmail.com",
-                "Ultimo Acesso": "2024-03-12T21:45:16"
-            }
-        ]
-    );
-    model.ca
+    model.usuarios = ko.observable
+    model.carregar = function () {
+        $.ajax("http://localhost:56458/api/Usuarios").done(data => model.usuarios(data));
+    }
+    model.carregar();
 }
+ko.applyBindings(UsuarioModel);

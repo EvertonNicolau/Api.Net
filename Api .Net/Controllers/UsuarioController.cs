@@ -46,7 +46,7 @@ namespace Api.Net.Controllers
         {
             return View();
         }
-
+    
         // POST: Usuario/Create
         // Para se proteger de mais ataques, habilite as propriedades específicas às quais você quer se associar. Para 
         // obter mais detalhes, veja https://go.microsoft.com/fwlink/?LinkId=317598.
