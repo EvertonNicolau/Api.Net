@@ -1,12 +1,19 @@
 ﻿@Scripts.Render("~/bundles/knockout")
 @Scripts.Render("~/bundles/usuario")
 }
-
+@using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h4>Usuário</h4>
+        </div>
+    }
 <table>
     <thead>
         <tr>
-            <th>Código</th>
-            <th>Email</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>E-mail</th>
             <th>Último acesso</th>
             <th>Operações</th>
         </tr>
@@ -23,5 +30,5 @@
         </tr>
     </tbody>
 </table>
-
+}
 

@@ -11,12 +11,17 @@ namespace Api.Net.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class usuario
     {
+        [Display (Name = "Código")]
         public int codigo { get; set; }
+        [Display (Name = "E-mail")]
         public string email { get; set; }
+        [Display(Name = "Senha")]
         public string senha { get; set; }
+        [Display (Name = "Último Acesso")]
         public byte[] ultimo_acesso { get; set; }
     }
 }
